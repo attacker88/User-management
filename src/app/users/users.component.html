@@ -1,0 +1,27 @@
+<div class="row" >
+  <div class="col-xl-12 col-lg-col-md-12 col sm-12">
+    <ngx-datatable class="bootstrap ngx-datatable fixed-header"
+      [rows]="service.userlist" columnMode="force" [headerHeight]="70" [rowHeight]="60"
+      [scrollbarV]="true" >
+      <ngx-datatable-column [width]="50" name="FirstName" prop="firstname" [sortable]="true"></ngx-datatable-column>
+      <ngx-datatable-column [width]="50" name="LastName" prop="lastname" [sortable]="true"></ngx-datatable-column>
+      <ngx-datatable-column [width]="30" name="Gender" prop="gender" [sortable]="false"></ngx-datatable-column>
+      <ngx-datatable-column [width]="50" name="Country" prop="country" [sortable]="true"></ngx-datatable-column>
+      <ngx-datatable-column [width]="50" name="Address" prop="address" [sortable]="false"></ngx-datatable-column>
+      <ngx-datatable-column [width]="50" name="PhoneNo" prop="phoneno" [sortable]="true"></ngx-datatable-column>
+      <ngx-datatable-column [width]="10" name="Edit" [sortable]="false">
+        <ng-template  ngx-datatable-cell-template>
+          <button class="btn btn-info" >
+            <span class="fa fa-pencil"></span>
+          </button>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [width]="20" name="Remove" [sortable]="false">
+        <ng-template ngx-datatable-cell-template>
+          <button class="btn btn-danger" >
+            <span class="fa fa-remove"></span></button>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>
